@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <!-- <script type="text/javascript" src="shim.min.js"></script> -->
+        <script lang="javascript" src="dist/FileSaver.min.js"></script>
+        <script lang="javascript" src="dist/xlsx.full.min.js"></script>
+        <script lang="javascript" src="dist/script.js"></script>
+    </head>
+    <body>
+        <span>Input data</span>
+        <Input type="file" id="source" placeholder="Source" onchange="onSourceChange(event)"></Input>
+        <br/>
+        <br/>
+        <br/>
+        <span>Sample sheet</span>
+        <Input type="file" id="sample" placeholder="Sample" onchange="onSampleDataChange(event)" disabled></Input>
+        <br/>
+        <br/>
+        <br/>
+        <span>Mapping json</span>
+        <Input type="file" id="mappingJson" placeholder="mappingJson" onchange="onMappingChange(event)"></Input>
+        <br/>
+        <br/>
+        <br/>
+        <Input type="number" id="startSheet" placeholder="Start Sheet" ></Input>
+        <Input type="number" id="endSheet" placeholder="Ending Sheet"></Input>
+        <button onclick="exportNow()">Export</button>
+    </body>
+</html>
